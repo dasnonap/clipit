@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('media', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('filename', length: 64);
+
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
             $table->string('path');
